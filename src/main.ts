@@ -14,6 +14,7 @@ async function bootstrap() {
     credentials: false, // Si necesitas manejar cookies o autenticación
   });
 
+  
   app.setGlobalPrefix('api');
   app.useGlobalPipes(
     new ValidationPipe({
