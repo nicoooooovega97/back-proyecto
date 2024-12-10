@@ -9,11 +9,12 @@ async function bootstrap() {
 
   // Habilita CORS de manera predeterminada
   app.enableCors({
-    origin: 'http://localhost:3001', // Cambia '*' por el dominio específico de tu frontend en producción (por ejemplo, 'http://localhost:3000')
+    origin: 'http://localhost:3000', // Cambia '*' por el dominio específico de tu frontend en producción (por ejemplo, 'http://localhost:3000')
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // Si necesitas manejar cookies o autenticación
+    credentials: false, // Si necesitas manejar cookies o autenticación
   });
 
+  
   app.setGlobalPrefix('api');
   app.useGlobalPipes(
     new ValidationPipe({
